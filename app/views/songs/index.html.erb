@@ -1,0 +1,9 @@
+
+<br>
+
+<%@songs.each do |song|%>
+<h3><%=link_to song.name, "/songs/#{song.id}"%></h3>
+
+<%end%>
+
+

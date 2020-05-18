@@ -1,0 +1,25 @@
+
+
+<h1>Check out this song</h1>
+<h1>My Genre</h1>
+<br>
+
+
+<ul>
+           <%if @genre.nil?%>
+           <li><h3><%="no song"%></h3></li>
+           <%else%>
+        <li><h3><%=@genre.name%></h3></li>
+        <br>
+        <li><h3><%=@genre%></h3></li>
+        <br>
+
+</ul>
+<%end%>
+
+
+
+
+<br>
+<%=link_to "Genres page", "/genres/"%>
+<br>

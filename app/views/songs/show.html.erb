@@ -21,5 +21,5 @@
 <%=link_to @artist.name, artist_path(@artist.id)%>
 <br>
 <%= form_tag song_path(@song), method: "delete" do %>
-    <%= submit_tag "WHATEVER" %>
+    <%= submit_tag "Delete" %>
 <% end %>

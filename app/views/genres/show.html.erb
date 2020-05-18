@@ -23,3 +23,7 @@
 <br>
 <%=link_to "Genres page", "/genres/"%>
 <br>
+
+<% form_tag genre_path(@genre), method "delete do"%>
+<%=submit_tag "Delete"%>
+<%end%>

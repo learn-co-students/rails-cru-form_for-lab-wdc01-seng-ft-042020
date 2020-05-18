@@ -1,0 +1,25 @@
+
+
+<h1>My Song</h1>
+<br>
+
+<ul>
+           <%if @song.nil?%>
+           <li><h3><%="no song"%></h3></li>
+           <%else%>
+        <li><h3><%=@song.name%></h3></li>
+        <li><h3><%=@song.genre.name%></h3></li>
+        <li><h3><%=@song.artist.name%></h3></li>
+        <br>
+
+</ul>
+<%end%>
+
+<%= link_to @genre.name, genre_path(@genre.id)%>
+
+<br>
+<%=link_to @artist.name, artist_path(@artist.id)%>
+<br>
+<%= form_tag song_path(@song), method: "delete" do %>
+    <%= submit_tag "Delete" %>
+<% end %>

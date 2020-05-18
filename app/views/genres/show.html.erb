@@ -1,0 +1,29 @@
+
+
+
+<h1>My Genre</h1>
+<br>
+
+
+
+           <%if @genre.nil?%>
+           <h3><%="no song"%></h3>
+           <%else%>
+        <h1><%=@genre.name%></h1>
+        <br>
+        <h1><%=@genre%></h1>
+        <br>
+
+
+<%end%>
+
+
+
+
+<br>
+<%=link_to "Genres page", "/genres/"%>
+<br>
+
+<%=form_tag genre_path(@genre), method: "delete" do%>
+<%=submit_tag "Delete"%>
+<%end%>

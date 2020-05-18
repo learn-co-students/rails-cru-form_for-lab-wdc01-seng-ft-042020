@@ -4,6 +4,6 @@
 <br>
 
 <%@genres.each do |genre|%>
-<h2><%=link_to genre.name, "/genre/#{genre.id}"%></h2>
+<h2><%=link_to genre.name, genre_path(genre)%></h2>
 
 <%end%>

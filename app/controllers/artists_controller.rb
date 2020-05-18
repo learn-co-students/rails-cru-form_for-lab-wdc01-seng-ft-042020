@@ -1,4 +1,6 @@
 class ArtistsController < ApplicationController
+    
+    
     def index
         @artists = Artist.all
     end
@@ -19,6 +21,7 @@ class ArtistsController < ApplicationController
     def update
         @artist = Artist.find(params[:id])
         @artist.update(params.require(:artist).permit(:name, :bio))
+        redirect_to artist_path(@artist)
     end
 
     def create
@@ -26,7 +29,7 @@ class ArtistsController < ApplicationController
         @artist.name = params[:artist][:name]
         @artist.bio = params[:artist][:bio]
         @artist.save
-        redirect_to artists_path(@artist)
+        redirect_to artist_path(@artist)
     end
 
     def destroy
@@ -34,5 +37,8 @@ class ArtistsController < ApplicationController
         @artist.delete
         redirect_to artists_path
     end
-    
+
+   
+
+
     end

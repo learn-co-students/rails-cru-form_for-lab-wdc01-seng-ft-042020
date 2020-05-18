@@ -25,8 +25,8 @@ class ArtistsController < ApplicationController
 
     def update
         @artist = Artist.find(params[:id])
-        @artist = Artist.update(params[:id])
-        redirect_to artists_path 
+        @artist.update(artist_params)
+        redirect_to @artist
     end
 
 

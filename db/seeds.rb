@@ -8,3 +8,9 @@
 
 koffee = Artist.create(name: "koffee", bio: "Jamaican Raggae")
 jcole = Artist.create(name: "J.cole", bio:"Rapper from North Carolina")
+
+g1 = Genre.create(name: "Rap")
+g2 = Genre.create(name: "Raggae")
+g3 = Genre.create(name: "Jazz")
+g4 = Genre.create(name: "Pop")
+g5 = Genre.create(name: "R&B")

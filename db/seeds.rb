@@ -23,3 +23,6 @@ e.genre_id = d.id
 
 h.artist_id = b.id
 h.genre_id = c.id
+
+e.save
+h.save

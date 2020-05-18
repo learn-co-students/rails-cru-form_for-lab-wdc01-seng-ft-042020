@@ -1,20 +1,20 @@
 
 
-<h1>Check out this song</h1>
+
 <h1>My Genre</h1>
 <br>
 
 
-<ul>
+
            <%if @genre.nil?%>
-           <li><h3><%="no song"%></h3></li>
+           <h3><%="no song"%></h3>
            <%else%>
-        <li><h3><%=@genre.name%></h3></li>
+        <h1><%=@genre.name%></h1>
         <br>
-        <li><h3><%=@genre%></h3></li>
+        <h1><%=@genre%></h1>
         <br>
 
-</ul>
+
 <%end%>
 
 
@@ -24,6 +24,6 @@
 <%=link_to "Genres page", "/genres/"%>
 <br>
 
-<% form_tag genre_path(@genre), method "delete do"%>
+<%=form_tag genre_path(@genre), method: "delete" do%>
 <%=submit_tag "Delete"%>
 <%end%>
